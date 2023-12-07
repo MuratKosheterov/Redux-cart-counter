@@ -1,25 +1,35 @@
 import { createSlice } from "@reduxjs/toolkit";
+import products from "../data/data";
+
+const cartItems = products.map((item) => {
+  return { ...item, amount: 0 };
+});
 
 const initialState = {
-  data: 0,
-  cart: [],
-  quantity:0,
+  cartItems: cartItems,
+  amount: 0,
   total: 0,
-  price:0,
 };
 
+
 export const counterSlice = createSlice({
-  name: "counter",
+  name: "cart",
   initialState,
   reducers: {
     increament: (state, action) => {
-      state.data += 1;
+      const cartItem = state.cartItems.find(
+        (item) => item.id === action.payload.id
+      );
+      cartItem.amount += 1;
     },
     decreament: (state, action) => {
-      if (state.data > 0) state.data -= 1;
-    },
+      const cartItem = state.cartItems.find(
+        (item) => item.id === action.payload.id
+      );
+      cartItem.amount -= 1;
+    }
   },
 });
 
-export const { increament, decreament } = counterSlice.actions;
+export const { increament, decreament, calculateTotals } = counterSlice.actions;
 export default counterSlice.reducer;
