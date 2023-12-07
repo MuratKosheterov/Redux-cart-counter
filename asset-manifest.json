@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MuratKosheterov/Redux-cart-counter/static/css/main.e6c13ad2.css",
+    "main.js": "/MuratKosheterov/Redux-cart-counter/static/js/main.ebccef2a.js",
+    "index.html": "/MuratKosheterov/Redux-cart-counter/index.html",
+    "main.e6c13ad2.css.map": "/MuratKosheterov/Redux-cart-counter/static/css/main.e6c13ad2.css.map",
+    "main.ebccef2a.js.map": "/MuratKosheterov/Redux-cart-counter/static/js/main.ebccef2a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.ebccef2a.js"
+  ]
+}
